@@ -554,7 +554,7 @@ public class Escuela extends javax.swing.JFrame {
                 }
                 filaMedia.createCell(0).setCellValue(Alumno);
 
-                for (int col = 0; col <= 11; col++) {
+                for (int col = 0; col <= 3; col++) {
                     double media = calcularMedia(hojaAlumno, col);
                     filaMedia.createCell(col + 1).setCellValue(media);
                 }
