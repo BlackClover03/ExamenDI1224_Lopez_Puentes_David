@@ -234,6 +234,37 @@ public class Escuela extends javax.swing.JFrame {
             }
             
             actualizarHojaMedias(libro, cursoSeleccionado);
+            
+            /*int ultimaFila2 = hoja.getLastRowNum();
+            
+            double sumaNota1 = 0, sumaNota2 = 0, sumaNota3 = 0, sumaNota4 = 0;
+            
+            int filasDatos = 0;
+            
+            for (int i = 1; i <= ultimaFila; i++) {
+                Row fila2 = hoja.getRow(i);
+                if (fila2 != null) {
+                    sumaNota1 += getNumericValue(fila2.getCell(1));
+                    sumaNota2 += getNumericValue(fila2.getCell(2));
+                    sumaNota3 += getNumericValue(fila2.getCell(3));
+                    sumaNota4 += getNumericValue(fila2.getCell(4));
+                    filasDatos++;
+                }
+            }
+            
+            if (filasDatos > 0) {
+                double media1 = sumaNota1 / filasDatos;
+                double media2 = sumaNota2 / filasDatos;
+                double media3 = sumaNota3 / filasDatos;
+                double media4 = sumaNota4 / filasDatos;
+
+                Row filaMedias = hoja.createRow(ultimaFila + 1);
+                filaMedias.createCell(0).setCellValue("Promedios");
+                filaMedias.createCell(1).setCellValue(media1);
+                filaMedias.createCell(2).setCellValue(media2);
+                filaMedias.createCell(3).setCellValue(media3);
+                filaMedias.createCell(4).setCellValue(media4);
+            }*/
 
             try (FileOutputStream fos = new FileOutputStream(archivoExcel)) {
                 libro.write(fos);
